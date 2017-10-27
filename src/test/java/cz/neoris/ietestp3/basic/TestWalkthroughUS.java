@@ -2,7 +2,6 @@ package cz.neoris.ietestp3.basic;
 
 import cz.neoris.ietestp3.pages.*;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
-import org.apache.bcel.generic.NEW;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeClass;
@@ -12,10 +11,10 @@ import org.testng.log4testng.Logger;
 
 import java.util.concurrent.TimeUnit;
 
-public class TestWalkthroughMX implements Helper {
+public class TestWalkthroughUS implements Helper {
 
     WebDriver driver;
-    private static Logger LOG = Logger.getLogger(TestWalkthroughMX.class);
+    private static Logger LOG = Logger.getLogger(TestWalkthroughUS.class);
 
 
     @BeforeClass
@@ -33,17 +32,17 @@ public class TestWalkthroughMX implements Helper {
 
     @Test
 
-    public void testMX() {
+    public void testUS() {
         LOG.info("Starting test ...");
 
         ButtonsPageBy btns = new ButtonsPageBy(driver);
 
         LoginPageBy loginpage = new LoginPageBy(driver).get();
-        loginpage.LogInMX();
+        loginpage.LogInUS();
 
         DashBoardBy dashboardpage = new DashBoardBy(driver);
         dashboardpage.WaitForOPCButton();
-        dashboardpage.ClickOPCMX();
+        dashboardpage.ClickOPCUS();
 
         OrdersPageBy orderspage = new OrdersPageBy(driver);
         orderspage.WaitForRequestButton();
@@ -52,20 +51,9 @@ public class TestWalkthroughMX implements Helper {
         orderspage.ClickRequest();
 
         NewOrderPageBy neworderpage = new NewOrderPageBy(driver);
-        neworderpage.WaitForButtons();
-        neworderpage.MPClick();
+        neworderpage.WaitForButtonUS();
+        neworderpage.USRMXClick();
         btns.NextBtnClick();
-        btns.DeliveryClick();
-
-        LocationPageBy locationpage = new LocationPageBy(driver);
-        locationpage.ClickShit();
-
-
-
     }
 
-    /**@AfterTest
-    public void tearDown() {
-        driver.quit();
-    }**/
 }

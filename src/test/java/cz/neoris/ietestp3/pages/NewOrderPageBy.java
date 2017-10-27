@@ -14,6 +14,7 @@ public class NewOrderPageBy implements Helper {
     private final WebDriver driver;
 
     @FindBy(css = "div.d-flex.flex-wrap.products > div:nth-of-type(1)") private WebElement RMX;
+    @FindBy(xpath = "//div[@class='product']") private WebElement RMXUSA;
     @FindBy(css = "div.d-flex.flex-wrap.products > div:nth-of-type(2)") private WebElement CEMBULK;
     @FindBy (css = "div.d-flex.flex-wrap.products > div:nth-of-type(3)") private WebElement MULTIP;
 
@@ -29,8 +30,17 @@ public class NewOrderPageBy implements Helper {
         WebElement ExpectedMP = wait.until(ExpectedConditions.elementToBeClickable(MULTIP));
     }
 
+    public void WaitForButtonUS() throws ElementNotVisibleException {
+        WebDriverWait wait = new WebDriverWait(driver, 60);
+        WebElement ExpectedRMX = wait.until(ExpectedConditions.elementToBeClickable(RMXUSA));
+    }
+
     public void RMXClick() throws ElementNotVisibleException {
         RMX.click();
+    }
+
+    public void USRMXClick() throws ElementNotVisibleException {
+        RMXUSA.click();
     }
 
     public void CementClick() throws ElementNotVisibleException {

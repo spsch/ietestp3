@@ -40,10 +40,10 @@ public class ChromeSmoke implements Helper {
         LOG.debug("load dashboard page");
         DashBoardBy dashboardpage = new DashBoardBy(driver);
         dashboardpage.WaitForOPCButton();
-        dashboardpage.CheckOPFrame();
+        dashboardpage.CheckOPFrameUS();
         dashboardpage.CheckOPCButton();
         dashboardpage.CheckLeftFrame();
-        dashboardpage.ClickOPC();
+        dashboardpage.ClickOPCUS();
 
     }
 

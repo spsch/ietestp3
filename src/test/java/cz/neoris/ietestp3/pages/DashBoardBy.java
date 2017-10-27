@@ -19,8 +19,16 @@ public class DashBoardBy implements Helper {
 
     @FindBy(css = "div.container-fluid > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(6) > a.card-container > div.box")
         private WebElement OrderAndProduct;
+
+    @FindBy(xpath = "/html/body/app/home/div/dashboard/div/div[2]/div[2]/div[1]/div[5]/a/div/h2")
+        private WebElement OrderAndProductUS;
+
     @FindBy(css = "ul.sidebar-ul > li:nth-of-type(6) > a > span.as-label")
-        private WebElement OrderAndProductFrame;
+        private WebElement OrderAndProductFrameMX;
+
+    @FindBy(css = "ul.sidebar-ul > li:nth-of-type(5) > a > span.as-label")
+        private WebElement OrderAndProductFrameUS;
+
     @FindBy (css = "div.collapse.logo-container-gt-sm") private WebElement LeftFrameName;
 
     public DashBoardBy(WebDriver driver) {
@@ -53,8 +61,13 @@ public class DashBoardBy implements Helper {
         assertTrue("No order element", TextOfOPC != "Order and Product Catalog");
     }
 
-    public void CheckOPFrame() throws ElementNotVisibleException {
-        String TextOfOPFrame = OrderAndProductFrame.getText();
+    public void CheckOPFrameMX() throws ElementNotVisibleException {
+        String TextOfOPFrame = OrderAndProductFrameMX.getText();
+        assertTrue("No order element in left frame", TextOfOPFrame != "Order and Product Catalog");
+    }
+
+    public void CheckOPFrameUS() throws ElementNotVisibleException {
+        String TextOfOPFrame = OrderAndProductFrameUS.getText();
         assertTrue("No order element in left frame", TextOfOPFrame != "Order and Product Catalog");
     }
 
@@ -68,8 +81,12 @@ public class DashBoardBy implements Helper {
         assertTrue("No dashboard page" + mpage, mpage.endsWith("/dashboard"));
     }
 
-    public void ClickOPC() throws ElementNotVisibleException {
+    public void ClickOPCMX() throws ElementNotVisibleException {
         OrderAndProduct.click();
+    }
+
+    public void ClickOPCUS() throws ElementNotVisibleException {
+        OrderAndProductUS.click();
     }
 
 
