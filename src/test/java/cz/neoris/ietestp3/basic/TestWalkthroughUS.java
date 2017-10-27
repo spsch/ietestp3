@@ -4,6 +4,7 @@ import cz.neoris.ietestp3.pages.*;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -54,6 +55,11 @@ public class TestWalkthroughUS implements Helper {
         neworderpage.WaitForButtonUS();
         neworderpage.USRMXClick();
         btns.NextBtnClick();
+    }
+
+    @AfterTest
+    public void tearDown() {
+        driver.quit();
     }
 
 }

@@ -5,6 +5,7 @@ import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.apache.bcel.generic.NEW;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -64,8 +65,8 @@ public class TestWalkthroughMX implements Helper {
 
     }
 
-    /**@AfterTest
+    @AfterTest
     public void tearDown() {
         driver.quit();
-    }**/
+    }
 }
