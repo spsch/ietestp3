@@ -58,7 +58,7 @@ public class TestWalkthroughMX implements Helper {
         btns.DeliveryClick();
 
         LocationPageBy locationpage = new LocationPageBy(driver);
-        locationpage.FillJobsite();
+        locationpage.ClickShit();
 
 
 
