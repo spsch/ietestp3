@@ -52,7 +52,7 @@ public class OrdersPageBy implements Helper {
     public void ClickRequest() throws ElementNotVisibleException {
 
         RequestOrderButton.click();
-        driver.findElement(By.xpath("//*[@id=\"layout\"]/page-orders/div[3]/div/div[2]/div")).click();
+
         driver.get(BASEURL + "/ordersnproduct/app/new");
     }
 
