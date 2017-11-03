@@ -16,5 +16,11 @@ public interface Helper {
     final String US_JOBSITE = "0050107633 1760 BUSH ST";
     final String US_POD = "0050107633 1760 BUSH ST";
     final String US_CT = "RICK FEDICK";
+    /**production values**/
+    final String PRODMX_USER = "dcmuser.mex@hotmail.com";
+    final String PRODUS_USER = "alejandra.garza@neoris.com";
+    final String PRODMX_PWD = "C3m3xDCMM3x2017";
+    final String PRODUS_PWD = "Al3C3m3x.";
+
 
 }

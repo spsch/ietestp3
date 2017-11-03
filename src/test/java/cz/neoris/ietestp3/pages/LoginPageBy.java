@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.LoadableComponent;
 import org.openqa.selenium.support.ui.Sleeper;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import sun.rmi.runtime.Log;
 
 import static org.junit.Assert.assertTrue;
 
@@ -51,6 +52,18 @@ public class LoginPageBy extends LoadableComponent<LoginPageBy> implements Helpe
     public void LogInMX() {
         clearAndType(Username, USERNAME_MX);
         clearAndType(Password, PWD);
+        LoginButton.click();
+    }
+
+    public void LogInPRODMX() {
+        clearAndType(Username, PRODMX_USER);
+        clearAndType(Password, PRODMX_PWD);
+        LoginButton.click();
+    }
+
+    public void LogInPRODUS() {
+        clearAndType(Username, PRODUS_USER);
+        clearAndType(Password, PRODUS_PWD);
         LoginButton.click();
     }
 
