@@ -3,6 +3,7 @@ package cz.neoris.ietestp3.basic;
 public interface Helper {
 
     final String BASEURL = "https://dcm-qa.mybluemix.net";
+    final String BASEPRODURL = "https://dcm-prod.mybluemix.net";
     final String USERNAME_MX = "customer05cmxgo@gmail.com";
     final String USERNAME_USA = "nibbi.da.test@mailinator.com";
     final String PWD = "TestCycleV2CemexGo";
