@@ -1,9 +1,7 @@
 package cz.neoris.ietestp3.pages;
 
 import cz.neoris.ietestp3.basic.Helper;
-import org.openqa.selenium.ElementNotVisibleException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,7 +14,8 @@ public class ButtonsPageBy implements Helper {
     @FindBy(css = "button.button.bright-green") private WebElement ActiveNextBtn;
     @FindBy(css = "button.button.disabled") private WebElement NonActiveNextBtn;
     @FindBy(css = "button.button.button-ghost") private WebElement BackAndExitBtn;
-    @FindBy(css = "div.circle-container > div:nth-of-type(1) > span:nth-of-type(2)") private WebElement Delivery;
+    /**@FindBy(css = "div.circle-container > div:nth-of-type(1) > span:nth-of-type(2)") private WebElement Delivery;**/
+    @FindBy(xpath = "//*[@id=\"steps-slider\"]/div/step[2]/mode-step/div/div[1]/span[2]") private WebElement Delivery;
     @FindBy(css = "div.circle-container > div:nth-of-type(3) > span:nth-of-type(2)") private WebElement Pickup;
 
     public ButtonsPageBy(WebDriver driver) {
@@ -39,10 +38,14 @@ public class ButtonsPageBy implements Helper {
     }
 
     public void DeliveryClick() throws ElementNotVisibleException {
-        WebDriverWait swait = new WebDriverWait(driver, 60);
-        WebElement clickableDelivery = swait.until(ExpectedConditions.elementToBeClickable(Delivery));
-        Delivery.click();
-    }
+        try {
+            WebDriverWait swait = new WebDriverWait(driver, 60);
+            WebElement clickableDeliveryVisible = swait.until(ExpectedConditions.visibilityOf(Delivery));
+            WebElement clickableDelivery = swait.until(ExpectedConditions.elementToBeClickable(Delivery));
+            clickableDelivery.click();
+    } catch (ElementNotVisibleException e) {
+        System.out.println("Element Delivery not found: " + e);}
+        }
 
     public void PickupClick() throws ElementNotVisibleException {
         WebDriverWait fwait = new WebDriverWait(driver, 60);

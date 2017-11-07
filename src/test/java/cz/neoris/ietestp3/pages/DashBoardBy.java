@@ -36,18 +36,6 @@ public class DashBoardBy implements Helper {
         PageFactory.initElements(driver, this);
     }
 
-    /**@Override
-    protected void load() {
-        driver.get(BASEURL + "/home/dashboard");
-        WaitForOPCButton();
-    }
-
-    @Override
-    protected void isLoaded() throws Error {
-        String url = driver.getCurrentUrl();
-        assertTrue("Not on dashboard page: " + url, url.endsWith("/dashboard"));
-    }**/
-
     public void WaitForOPCButton() throws ElementNotVisibleException {
         WebDriverWait mwait = new WebDriverWait(driver, 60);
         WebElement LongAwaitedButton = mwait

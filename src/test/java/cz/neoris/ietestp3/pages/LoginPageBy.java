@@ -30,7 +30,7 @@ public class LoginPageBy extends LoadableComponent<LoginPageBy> implements Helpe
     @Override
     protected void load() {
 
-        driver.get(BASEPRODURL + "/login");
+        driver.get(BASEURL + "/login");
     }
     @Override
     protected void isLoaded() throws Error {

@@ -37,14 +37,14 @@ public class TestWalkthroughMX implements Helper {
     public void testMX() {
         LOG.info("Starting test ...");
 
-        ButtonsPageBy btns = new ButtonsPageBy(driver);
-
         LoginPageBy loginpage = new LoginPageBy(driver).get();
         loginpage.LogInMX();
 
         DashBoardBy dashboardpage = new DashBoardBy(driver);
         dashboardpage.WaitForOPCButton();
         dashboardpage.ClickOPCMX();
+
+        ButtonsPageBy btns = new ButtonsPageBy(driver);
 
         OrdersPageBy orderspage = new OrdersPageBy(driver);
         orderspage.WaitForRequestButton();

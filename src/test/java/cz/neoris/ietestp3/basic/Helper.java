@@ -6,7 +6,7 @@ public interface Helper {
     final String BASEPRODURL = "https://dcm-prod.mybluemix.net";
     final String USERNAME_MX = "customer05cmxgo@gmail.com";
     final String USERNAME_USA = "nibbi.da.test@mailinator.com";
-    final String PWD = "TestCycleV2CemexGo";
+    final String PWD = "TestCycleV2CemexGo"; /**TestCycleV2CemexGo**/
     final String HEADER = "New Order";
     /**MX values**/
     final String MX_JOBSITE = "0065045792 Home Depot La Paz";
