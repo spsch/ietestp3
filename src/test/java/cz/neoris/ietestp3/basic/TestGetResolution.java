@@ -22,6 +22,9 @@ public class TestGetResolution {
     @BeforeTest
     public void setUp() {
 
+        /**for linux systems**/
+        System.setProperty("webdriver.chrome.driver", "/home/test/scripts/chromedriver/chromedriver");
+
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.manage().window().maximize();
