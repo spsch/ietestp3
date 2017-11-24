@@ -4,6 +4,7 @@ public interface Helper {
 
     final String BASEURL = "https://dcm-qa.mybluemix.net";
     final String BASEPRODURL = "https://dcm-prod.mybluemix.net";
+    final String CONSOLE_PROD = "http://order-taking-console-prodv21.mybluemix.net";
     final String USERNAME_MX = "customer05cmxgo@gmail.com";
     final String USERNAME_USA = "nibbi.da.test@mailinator.com";
     final String PWD = "TestCycleV2CemexGo"; /**TestCycleV2CemexGo**/
@@ -17,10 +18,9 @@ public interface Helper {
     final String US_POD = "0050107633 1760 BUSH ST";
     final String US_CT = "RICK FEDICK";
     /**production values**/
-    final String PRODMX_USER = "dcmuser.mex@hotmail.com";
-    final String PRODUS_USER = "alejandra.garza@neoris.com";
-    final String PRODMX_PWD = "C3m3xDCMM3x2017";
-    final String PRODUS_PWD = "Al3C3m3x.";
+    final String PROD_MX_USER = "MXCXGOV2CCC@cemexlabs.com";
+    final String PROD_US_USER = "USCXGOV2CCC@cemexlabs.com";
+    final String PROD_PWD = "C3mexGo@v2";
 
 
 }

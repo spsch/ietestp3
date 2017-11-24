@@ -56,14 +56,14 @@ public class LoginPageBy extends LoadableComponent<LoginPageBy> implements Helpe
     }
 
     public void LogInPRODMX() {
-        clearAndType(Username, PRODMX_USER);
-        clearAndType(Password, PRODMX_PWD);
+        clearAndType(Username, PROD_MX_USER);
+        clearAndType(Password, PROD_PWD);
         LoginButton.click();
     }
 
     public void LogInPRODUS() {
-        clearAndType(Username, PRODUS_USER);
-        clearAndType(Password, PRODUS_PWD);
+        clearAndType(Username, PROD_US_USER);
+        clearAndType(Password, PROD_PWD);
         LoginButton.click();
     }
 
