@@ -11,7 +11,7 @@ public class ButtonsPageBy implements Helper {
 
     private final WebDriver driver;
 
-    @FindBy(css = "button.button.bright-green") private WebElement ActiveNextBtn;
+    @FindBy(css = "div.float-md-right.text-right > button:nth-of-type(2)") private WebElement ActiveNextBtn;
     @FindBy(css = "button.button.disabled") private WebElement NonActiveNextBtn;
     @FindBy(css = "button.button.button-ghost") private WebElement BackAndExitBtn;
     /**@FindBy(css = "div.circle-container > div:nth-of-type(1) > span:nth-of-type(2)") private WebElement Delivery;**/

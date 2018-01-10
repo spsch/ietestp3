@@ -39,7 +39,9 @@ public class TestWalkthroughMX implements Helper {
 
         LoginPageBy loginpage = new LoginPageBy(driver).get();
         loginpage.LogInMX();
-
+    }
+    @Test
+    public void testThriughMX() {
         DashBoardBy dashboardpage = new DashBoardBy(driver);
         dashboardpage.WaitForOPCButton();
         dashboardpage.ClickOPCMX();
@@ -60,8 +62,6 @@ public class TestWalkthroughMX implements Helper {
 
         LocationPageBy locationpage = new LocationPageBy(driver);
         locationpage.ClickShit();
-
-
 
     }
 

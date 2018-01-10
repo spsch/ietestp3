@@ -17,7 +17,7 @@ public class DashBoardBy implements Helper {
 
     private final WebDriver driver;
 
-    @FindBy(css = "div.container-fluid > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(6) > a.card-container > div.box")
+    @FindBy(css = "div.row > div:nth-of-type(6) > a.card-container > div.box.dashboard__box > h2")
         private WebElement OrderAndProduct;
 
     @FindBy(xpath = "/html/body/app/home/div/dashboard/div/div[2]/div[2]/div[1]/div[5]/a/div/h2")
@@ -40,7 +40,7 @@ public class DashBoardBy implements Helper {
         WebDriverWait mwait = new WebDriverWait(driver, 60);
         WebElement LongAwaitedButton = mwait
                 .until(ExpectedConditions.presenceOfElementLocated(By
-                        .cssSelector("div.container-fluid > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(6) > a.card-container > div.box")));
+                        .cssSelector("div.row > div:nth-of-type(6) > a.card-container > div.box")));
     }
 
 
