@@ -3,6 +3,7 @@ package cz.neoris.ietestp3.basic;
 public interface Helper {
 
     final String BASEURL = "https://dcm-qa.mybluemix.net";
+    final String QAURL = "http://ordersnproduct-qa-2-1.mybluemix.net";
     final String BASEPRODURL = "https://cemexgo.com";
     final String CONSOLE_PROD = "http://order-taking-console-prodv21.mybluemix.net";
     final String USERNAME_MX = "customer05cmxgo@gmail.com";
